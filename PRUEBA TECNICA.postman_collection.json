@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "95d5424a-954d-47b6-a67a-9b4eaba6a0de",
+		"name": "PRUEBA TECNICA",
+		"description": "CONSULTAS PARA LA PRUEBA TECNICA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11520201"
+	},
+	"item": [
+		{
+			"name": "CREACION DE USUARIO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "04a1c254-464c-42b4-adaa-563090f34de4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Joel Barranzuela\",\r\n    \"email\": \"bbbbb@gmail.com\",\r\n    \"password\": \"aA$11111\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"cityCode\": \"1\",\r\n            \"countryCode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"43242342\",\r\n            \"cityCode\": \"1\",\r\n            \"countryCode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/practica/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practica",
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OBTENER TODOS LOS USUARIOS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "04a1c254-464c-42b4-adaa-563090f34de4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Joel Barranzuela\",\r\n    \"email\": \"cccc@gmail.com\",\r\n    \"password\": \"aA$11111\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"cityCode\": \"1\",\r\n            \"countryCode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"43242342\",\r\n            \"cityCode\": \"1\",\r\n            \"countryCode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/practica/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practica",
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DAR BAJA USUARIO",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "email",
+						"value": "cccc@gmail.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/practica/api/v1/user?email=bbbbb@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"practica",
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "bbbbb@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
